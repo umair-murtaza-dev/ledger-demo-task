@@ -1,0 +1,22 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  collation: utf8mb4_bin
+  reconnect: false
+  timeout: 5000
+  pool: 5
+  database: <%= ENV['database_name'] %>
+  username: <%= ENV['database_username'] %>
+  password: <%= ENV['database_password'] %>
+  host: <%= ENV['database_host'] %>
+
+development:
+  <<: *default
+
+
+test:
+  <<: *default
+
+
+production:
+  <<: *default

@@ -1,0 +1,10 @@
+database_name: <%= ENV.fetch("database_name") { 'ledgerapp_development' } %>
+database_host: <%= ENV.fetch("database_host") { 'db' } %>
+database_port: <%= ENV.fetch("database_port") { '3306' } %>
+database_username: <%= ENV.fetch("database_username") { 'root' } %>
+database_password: <%= ENV.fetch("database_password") { 'root' } %>
+redis_cache_uri: <%= ENV.fetch("redis_cache_uri") { 'redis://redis:6379/3' } %>
+sidekiq_basic_auth_username: <%= ENV.fetch("sidekiq_basic_auth_username") { 'sidekiq' } %>
+sidekiq_basic_auth_password: <%= ENV.fetch("sidekiq_basic_auth_password") { 'sidekiq' } %>
+locker_redis_uri: <%= ENV.fetch("locker_redis_uri") { 'redis://redis:6379/4' } %>
+sidekiq_redis_uri: <%= ENV.fetch("sidekiq_redis_uri") { 'redis://redis:6379/3' } %>
