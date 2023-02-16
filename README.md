@@ -71,36 +71,3 @@ If you face this issue, run the following commands:
 rm tmp/pids/server.pid
 docker-compose up -d
 ```
-
-### Important Notes
-
-Do not use `update_all` or `update_column` If you really need to use that then update updated_at too.
-
-## Infrastructure / development flow
-
-### Note
-
-**Currently, TerraformCloud and ArgoCD require IO team member manual approval, to deploy and provision.**
-
-### Staging
-
-- Applications urls:
-    - API: <https://ledger-api.staging.dev..com/status>
-    - Mailcatcher: <https://ledger-mailcatcher.staging.dev..com/>
-    - Frontend (`staging-ledger-web` repo): <https://ledger.staging.dev..com/>
-- AWS account: `development-`
-- Kubernetes:
-    - cluster: `-dev-cluster`
-    - namespace: `staging-ledger`
-- SonarQube project: <https://sonar.dev..com/dashboard?id=%3A-ledger>
-- TerraformCloud:
-    - ledger shared: <https://app.terraform.io/app/-com/workspaces/-ledger-shared>
-    - ledger api: <https://app.terraform.io/app/-com/workspaces/-ledger-staging>
-- Helm Chart Repo:
-    - repo: `-helm-charts`
-    - path: `marketplace/ledger/`
-- ArgoCD project: <https://argocd.dev..com/applications/staging-ledger>
-
-### Diagram
-
-![ledgerFlow](docs/img/ledger-ci-cd-flow.png)

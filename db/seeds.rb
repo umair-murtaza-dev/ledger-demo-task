@@ -5,4 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Company.create(title: 'first company')
+100.times do
+  url_key = SecureRandom.hex(2)
+  Link.create(short_url: ENV['base_url'] + url_key, short_url_key: url_key, destination_url: "https://google.com" )
+end

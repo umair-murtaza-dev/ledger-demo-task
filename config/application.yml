@@ -8,3 +8,4 @@ sidekiq_basic_auth_username: <%= ENV.fetch("sidekiq_basic_auth_username") { 'sid
 sidekiq_basic_auth_password: <%= ENV.fetch("sidekiq_basic_auth_password") { 'sidekiq' } %>
 locker_redis_uri: <%= ENV.fetch("locker_redis_uri") { 'redis://redis:6379/4' } %>
 sidekiq_redis_uri: <%= ENV.fetch("sidekiq_redis_uri") { 'redis://redis:6379/3' } %>
+base_url: <%= ENV.fetch("base_url") { 'localhost:7004' } %>
